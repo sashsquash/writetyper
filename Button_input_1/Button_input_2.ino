@@ -1,11 +1,7 @@
 /*
-  DigitalReadSerial
+  This is example code.
 
-  Reads a digital input on pin 2, prints the result to the Serial Monitor
-
-  This example code is in the public domain.
-
-  http://www.arduino.cc/en/Tutorial/DigitalReadSerial
+  https://github.com/sashsquash/writetyper/edit/main/Button_input_1.ino
 */
 
 #include <LCD_HD44780.h>
@@ -31,14 +27,14 @@ void setup() {
 void loop() {
   // read the first input pin:
   int buttonStateA = digitalRead(pushButtonA);
-  if (buttonStateA == 0) {
+  if (buttonStateA == 1) {
     (lcd.write(byte(0b01000001)));
   delay(300);
   }
 
   // read the second input pin:
   int buttonStateB = digitalRead(pushButtonB);
-  if (buttonStateB == 0) {
+  if (buttonStateB == 1) {
     (lcd.write(byte(0b01000010)));
   delay(300);
   }
